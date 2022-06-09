@@ -1,0 +1,74 @@
+.cabinet {
+    display: flex;
+
+    @include breakpoint($tablet-bp) {
+        flex-direction: column;
+    }
+
+}
+
+.cabinet__form {
+    width: 340px;
+
+    @include breakpoint($tablet-bp) {
+        order: 2;
+    }
+
+}
+
+.cabinet__avatar {
+    flex-grow: 1;
+    padding-left: 11rem;
+
+    img {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint($tablet-bp) {
+        order: 1;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.cabinet__file {
+
+    font-size: 1.4rem;
+    color: $blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.form__footer {
+    &--center {
+        text-align: center;
+    }
+}
+
+
+.form__footer-list {
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    line-height: 1.2;
+
+    li {
+        margin: 0 0.5rem;
+
+    }
+
+    a {
+        color: $white;
+    }
+
+}
